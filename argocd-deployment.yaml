@@ -2,13 +2,13 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: my-city-weahter-app
-  namespace: argocd 
+  namespace: argo-cd 
 spec:
   destination: 
     namespace: gitops-kubernetes
     server: https://kubernetes.default.svc 
   project: default 
   source:
-    repoURL: https://github.com/pietrolibro/gitops-k8s-deployments-book-weather-app.git
+    repoURL: https://github.com/GitHubKasun/gitops-k8s-deployments-weather-app.git
     path: deployment
     targetRevision: main
